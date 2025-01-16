@@ -1,8 +1,8 @@
 #include "Node.h"
 #include "Student.h"
 
-Node::Node() {
-  stu = NULL;
+Node::Node(Student* newStu) {
+  stu = newStu;
   next = nullptr;
 }
 

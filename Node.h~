@@ -9,11 +9,11 @@
 using namespace std;
 
 class Node {
- public:
+ private:
   Student* stu;
   Node* next;
-  
-  Node(); //constructor
+ public:
+  Node(Student* newStu); //constructor
   ~Node(); //destructor
 
   void setStudent(Student* newStu);
