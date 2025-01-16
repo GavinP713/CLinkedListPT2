@@ -56,13 +56,13 @@ void add(Node *head, char input[128]) {
   else {
     // get end node recursively
     node = head;
-    while (node->next != NULL) {
-      node = node->next;
+    while (node->getNext() != NULL) {
+      node = node->getNext();
     }
     
     // add new node to end
-    node->next = new Node();
-    node = node->next;
+    node->getNext() = new Node();
+    node = node->getNext();
   }
 
   // assign student to node
@@ -74,8 +74,13 @@ void remove(Node *head, char input[128]) {
   int id;
   cout << "ID: "; cin >> input;
 
-  // search through list
-  Node *node = head;
+  // search for matching IDs
+  Node *current = head;
+  Node *target = NULL;
+  while (current->getNext()->getStudent()->id == id) {
+    
+    node 
+  }
 }
 
 void print() {
@@ -86,4 +91,18 @@ double average() {
 }
 
 void sort() {
+}
+
+Node* find(Node *head, int id) {
+  if (head == NULL) return NULL;
+  else if (head->getStudent()->id == id) return head;
+  
+  Node *current = head;
+
+  while(current->getNext() != NULL){
+    if (current->getNext()->getStudent()->id == id) {
+    }
+  }
+
+  while(current->getNext()->getStudent()->id != id)
 }
